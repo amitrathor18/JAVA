@@ -22,7 +22,12 @@ class Arr{
 				arr[i][j]=sc.nextInt();
 				
 			}
-			System.out.println("number of ele present at " + i + "th row are " +col);
+			//System.out.println("number of ele present at " + i + "th row are " +col);
 		}
+		System.out.println("total number of 1-D present are " +arr.length);
+		System.out.println("Enter Index of one-D array whos no. of elements you want: ");
+		int ele =sc.nextInt();
+		System.out.println("total number of 1-D present are " +arr[ele].length);
+
 }
 }
