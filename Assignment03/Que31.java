@@ -26,7 +26,7 @@
 		public static void main(String ab[])
 		{
 			Student s1=new Student();
-			s1.setData(1,"Anjali badgujar");
+			s1.setData(1,"Amit");
 			s1.showData();
 			
 		}
