@@ -20,7 +20,7 @@ class Main{
        e = new Employee();
        System.out.println("e : "+e);
     //    e : Employee@15db9742 => className reference value
-       e.set(101 , "Mohit");
+       e.set(101 , "Amit");
        e.show();
 
        Employee  e1 = new Employee();
