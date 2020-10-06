@@ -4,7 +4,7 @@ public class Q56 {
 
 	public static void main(String[] args) {
 	
-		String str="akshay nemade";
+		String str="Amit Rathor";
 		
 		String s1[]=str.split(" ");  
 	    String FinalAns="";  
