@@ -1,32 +1,42 @@
-package com.cdac.java;
+/*Q66.	Write a program to store your shopping details in a binary file(shopping.dat) with information itemName, price, quantity. (Use ObjectOutputStream to store Item class object ).*/
 
-import java.util.Comparator;
-import java.util.TreeSet;
 
-public class TreeSetDemo {
-	public static void main(String[] args) {
-//		TreeSet<Integer> set = new TreeSet<>();
-		ReverseOrder comparator = new ReverseOrder();
-		TreeSet<Integer> set  = new TreeSet<>(comparator);
-		set.add(10);
-		set.add(25); // 25 is duplicate
-		set.add(7);
-		set.add(15);
-		set.add(15);
-		set.add(15);
-		System.out.println(set);
-		//for integers natural sorting order is  - ascending order
+
+//package p1;
+import java.io.*;
+
+class Shopping implements Serializable{
+		private String itemName;
+		private float price;
+	        public int quantity;
+		public Shopping () {
+
+		}
+		public Shopping(String itemName,float price,int quantity ) {
+			this.itemName = itemName;
+			this.price = price;
+	                this.quantity=quantity;
+		}
+		@Override
+		public String toString() {
+			return itemName + " " + price + " " + quantity;
+		}
 		
-		Student s1 = new Student(101,"Rahul", 100, 150, 175); // 425
-		Student s2 = new Student(102,"Rohan", 100, 200, 150); // 450
-		Student s3 = new Student(103,"Suresh", 130, 120, 140); // 390
-		
-		MarkComparator markComparator = new MarkComparator();
-		TreeSet<Student> stdSet = new TreeSet<>(markComparator);
-		stdSet.add(s3); // 
-		stdSet.add(s1);
-		stdSet.add(s2);
-		
-		System.out.println(stdSet);
 	}
-}
+	
+
+	public class Q66 {
+
+		public static void main(String[] args) throws IOException,ClassNotFoundException {
+			FileOutputStream f = 
+					new FileOutputStream("D:\\core_java\\codes\\shopping.dat");
+			
+			ObjectOutputStream o = new ObjectOutputStream(f);
+			
+			o.writeObject(new Shopping("abc",2300f,5));
+			o.close();	
+			f.close();
+			System.out.println("success");
+		}
+
+	}
